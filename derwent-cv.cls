@@ -15,6 +15,11 @@
 \definecolor{awesome-concrete-purple}{HTML}{AEA2B4}
 
 %-------------------------------------------------------------------------------
+% STYLE STUFF
+%-------------------------------------------------------------------------------
+\newcommand*{\entrytechiconstyle}[1]{{\fontsize{24pt}{1em}\headerfontlight\color{graytext} #1}}
+
+%-------------------------------------------------------------------------------
 % HEADER STUFF
 %-------------------------------------------------------------------------------
 
@@ -154,7 +159,7 @@
 }
 
 % Define a simple entry of cv information
-% Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+% Usage: \cventrysimple{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventrysimple}[5]{%
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
@@ -165,5 +170,16 @@
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+  \end{tabular*}%
+}
+
+% Define an entry of cv information
+% Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+\newcommand*{\cventrytech}[2]{%
+  \vspace{0.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth * 1 / 3} R{\textwidth * 2 / 3}}
+    \entrytitlestyle{#1} & \entrytechiconstyle{#2} \\
   \end{tabular*}%
 }
