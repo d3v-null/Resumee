@@ -17,18 +17,13 @@
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{awesome-cv}
-
-% \RequirePackage{devicon}
+\documentclass[11pt, a4paper]{derwent-cv}
 
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
-
-% Derwent custom colour
-\definecolor{awesome-concrete-purple}{HTML}{AEA2B4}
 
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
@@ -51,6 +46,12 @@
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
+\newcommand{\acvHeaderRoleSep}{\enskip\cdotp\enskip}
+
+\newcommand{\acvSubItemSep}{\enskip\cdotp\enskip}
+
+
+% name stuff
 
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
@@ -60,7 +61,7 @@
 \photo[rectangle,edge,right]{./profile}
 % \name{Peter Derwent}{McElhinney}
 \dername{Peter}{Derwent}{McElhinney}
-\position{Software Developer{\enskip\cdotp\enskip}Hardware Hacker{\enskip\cdotp\enskip}InfoSec Enthusiast}
+\position{Software Developer \acvHeaderRoleSep Hardware Hacker \acvHeaderRoleSep InfoSec Enthusiast}
 % \address{}
 
 % \mobile{}
@@ -70,7 +71,7 @@
 \linkedin{derwentx}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
-% \twitter{@derwentx}
+\twitter{@derwentx}
 % \skype{skype-id}
 % \reddit{reddit-id}
 % \extrainfo{extra informations}
@@ -83,7 +84,7 @@
 
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[C]
+\makedercvheader[C]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
