@@ -6,7 +6,7 @@
 
 \LoadClass{awesome-cv}
 
-% \RequirePackage{devicon}
+\RequirePackage{devicon}
 
 %-------------------------------------------------------------------------------
 % COLOUR STUFF

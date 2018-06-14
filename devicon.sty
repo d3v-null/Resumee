@@ -1,0 +1,18 @@
+%% based on furl's latex-fontawesome project.
+
+% Identify this package.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{devicon}[2018/06/13 Provides devicon icons]
+
+% Requirements to use.
+\usepackage{fontspec}
+
+% Define shortcut to load the Font Awesome font.
+\newfontfamily{\DI}{devicon}
+% Generic command displaying an icon by its name.
+\newcommand*{\devicon}[1]{{
+  \DI\csname devicon@#1\endcsname
+}}
+
+\expandafter\def\csname devicon@php-plain\endcsname {\symbol{"EB71}} \def\diPHPPlain {{\DI\csname devicon@php-plain\endcsname}}
+\endinput
