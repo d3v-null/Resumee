@@ -149,17 +149,17 @@
 
 
 % % re Define an environment for cvitems(for cventry)
-% \renewenvironment{cvitems}{%
-%   \vspace{-2.0mm}
-%   \begin{justify}
-%   \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
-%     \setlength{\parskip}{0pt}
-%     \renewcommand{\labelitemi}{\bullet}
-% }{%
-%   \end{itemize}
-%   \end{justify}
-%   \vspace{-2.0mm}
-% }
+\renewenvironment{cvitems}{%
+  \vspace{-2.0mm}
+  \begin{justify}
+  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+    \setlength{\parskip}{0pt}
+    \renewcommand{\labelitemi}{\bullet}
+}{%
+  \end{itemize}
+  \end{justify}
+  \vspace{-2.0mm}
+}
 
 % Define a section for CV
 % Usage: \cvsectionIcon{<section-title>}{<icon>}
