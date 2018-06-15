@@ -148,6 +148,19 @@
 }
 
 
+% % re Define an environment for cvitems(for cventry)
+% \renewenvironment{cvitems}{%
+%   \vspace{-2.0mm}
+%   \begin{justify}
+%   \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+%     \setlength{\parskip}{0pt}
+%     \renewcommand{\labelitemi}{\bullet}
+% }{%
+%   \end{itemize}
+%   \end{justify}
+%   \vspace{-2.0mm}
+% }
+
 % Define a section for CV
 % Usage: \cvsectionIcon{<section-title>}{<icon>}
 \newcommand{\cvsectionIcon}[2]{%
@@ -159,22 +172,20 @@
 }
 
 % Define a simple entry of cv information
-% Usage: \cventrysimple{<position>}{<title>}{<location>}{<date>}{<description>}
-\newcommand*{\cventrysimple}[5]{%
+% Usage: \cventrysimple{<title>}{<description>}{<items>}
+\newcommand*{\cventrysimple}[3]{%
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
-    \ifempty{#2#3}
-      {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+    \multicolumn{2}{L{\textwidth}}{\entrytitlestyle{#1}} \\
+    \multicolumn{2}{L{\textwidth}}{\paragraphstyle{#2}} \\
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#3}}
   \end{tabular*}%
 }
 
-% Define an entry of cv information
-% Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+% Define an entry in the technologies section of cv
+% Usage: \cventrytech{<category>}{<technologies>}
 \newcommand*{\cventrytech}[2]{%
   \vspace{0.0mm}
   \setlength\tabcolsep{0pt}
