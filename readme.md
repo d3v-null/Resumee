@@ -25,5 +25,5 @@ tlmgr install titlesec framed threeparttable wrapfig multirow enumitem bbding ti
 ## Compile to LaTeX
 
 ```bash
-TEXINPUTS="./Awesome-CV/:$TEXINPUTS" xelatex resumee_derwent.tex
+xelatex resumee_derwent_awesome.tex
 ```
