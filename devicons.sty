@@ -1,0 +1,21 @@
+%% based on furl's latex-fontawesome project.
+
+% Identify this package.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{devicons}[2018/10/22 Provides devicons icons]
+
+% Requirements to use.
+\usepackage{fontspec}
+
+% Define shortcut to load the Font Awesome font.
+\newfontfamily{\DIs}{icomoon}
+% Generic command displaying an icon by its name.
+\newcommand*{\icomoon}[1]{{
+  \DIs\csname icomoon@#1\endcsname
+}}
+
+\expandafter\def\csname icomoon@haskell\endcsname { \symbol{"E677}} \def\disHaskell {{\DIs\csname icomoon@haskell\endcsname}}
+\expandafter\def\csname icomoon@clojure-alt\endcsname { \symbol{"E66A}} \def\disClojurePlain {{\DIs\csname icomoon@clojure-alt\endcsname}}
+\expandafter\def\csname icomoon@gcp\endcsname { \symbol{"E6B2}} \def\disGCP {{\DIs\csname icomoon@gcp\endcsname}}
+
+\endinput
