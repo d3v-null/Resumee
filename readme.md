@@ -15,12 +15,17 @@ brew cask install basictex
 ## install LaTeX modules / fonts
 
 ```bash
-tlmgr install titlesec framed threeparttable wrapfig multirow enumitem bbding titling tabu mdframed tcolorbox textpos import varwidth needspace tocloft ntheorem environ trimspaces xifthen ifmtarg latexmk collection-fontsrecommended fontawesome sourcesanspro
+sudo tlmgr update --self
+sudo tlmgr install titlesec framed threeparttable wrapfig multirow enumitem bbding titling tabu mdframed tcolorbox textpos import varwidth needspace tocloft ntheorem environ trimspaces xifthen ifmtarg latexmk collection-fontsrecommended fontawesome sourcesanspro
 ```
 
 ## Install otf fonts:
 
 - <https://fontawesome.com/v4.7.0/assets/font-awesome-4.7.0.zip>
+
+## Install devicon font
+
+double click on `fonts/devicons.ttf` to install with FontBook
 
 ## Compile to LaTeX
 
