@@ -195,7 +195,7 @@
   \vspace{0.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth * 1 / 3} R{\textwidth * 2 / 3}}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth * 1 / 4} R{\textwidth * 3 / 4}}
     \entrytitlestyle{#1} & \entrytechiconstyle{#2} \\
   \end{tabular*}%
 }
