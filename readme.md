@@ -16,10 +16,10 @@ brew cask install basictex
 
 ```bash
 sudo tlmgr update --self
-sudo tlmgr install titlesec framed threeparttable wrapfig multirow enumitem bbding titling tabu mdframed tcolorbox textpos import varwidth needspace tocloft ntheorem environ trimspaces xifthen ifmtarg latexmk collection-fontsrecommended fontawesome sourcesanspro
+sudo tlmgr install titlesec framed threeparttable wrapfig multirow enumitem bbding titling tabu mdframed tcolorbox textpos import varwidth needspace tocloft ntheorem environ trimspaces xifthen ifmtarg latexmk collection-fontsrecommended fontawesome sourcesanspro svg transparent catchfile
 ```
 
-## Install otf fonts:
+## Install otf fonts
 
 - <https://fontawesome.com/v4.7.0/assets/font-awesome-4.7.0.zip>
 
@@ -30,5 +30,5 @@ double click on `fonts/devicons.ttf` to install with FontBook
 ## Compile to LaTeX
 
 ```bash
-xelatex resumee_derwent_awesome.tex
+xelatex --shell-escape resumee_derwent_awesome.tex
 ```
