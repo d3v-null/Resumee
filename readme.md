@@ -32,3 +32,10 @@ double click on `fonts/devicons.ttf` to install with FontBook
 ```bash
 xelatex --shell-escape resumee_derwent_awesome.tex
 ```
+
+## Preview
+
+![page_1](resumee_derwent_awesome_1.png)
+![page_2](resumee_derwent_awesome_2.png)
+
+*Note:* The references section and my personal contact info was deliberately excluded from these previews for privacy reasons, please contact me for references.
