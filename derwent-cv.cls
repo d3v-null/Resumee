@@ -30,6 +30,7 @@
 
 \newcommand*{\dername}[3]{\def\@firstname{#1}\def\@middlename{#2}\def\@lastname{#3}}
 \newcommand*{\middlename}[1]{\def\@middlename{#1}}
+\newcommand*{\fullname}[1]{\def\@fullname{#1}}
 
 % Re-Define a header for CV
 % Usage: \makecvheader
@@ -198,4 +199,20 @@
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth * 1 / 4} R{\textwidth * 3 / 4}}
     \entrytitlestyle{#1} & \entrytechiconstyle{#2} \\
   \end{tabular*}%
+}
+
+% Define a closing of the cover letter
+% Usage: \makederletterclosing
+\newcommand*{\makederletterclosing}{%
+  \vspace{3.4mm}
+  \lettertextstyle{\@letterclosing} \\\\
+  \ifthenelse{\isundefined{\@fullname}}
+    {\letternamestyle{\@firstname\ \@middlename\ \@lastname}}
+    {\letternamestyle{\@fullname}}
+  \ifthenelse{\isundefined{\@letterenclosure}}
+    {\\}
+    {%
+      \\\\\\
+      \letterenclosurestyle{\@letterenclname: \@letterenclosure} \\
+    }
 }
