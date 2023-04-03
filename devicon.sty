@@ -2,12 +2,18 @@
 
 % Identify this package.
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{devicon}[2018/06/13 Provides devicon icons]
+\ProvidesPackage{devicon}[2022/09/12 Provides devicon icons]
 
 % Requirements to use.
 \usepackage{fontspec}
 
-% Define shortcut to load the Font Awesome font.
+% Define shortcut to load the devicon font.
+% \newfontfamily{\DI}{devicon}
+\defaultfontfeatures[devicon]{
+    Extension={.ttf},
+    % Path=\@fontdir
+    Path=fonts/
+}
 \newfontfamily{\DI}{devicon}
 % Generic command displaying an icon by its name.
 \newcommand*{\devicon}[1]{{
@@ -29,10 +35,10 @@
 \expandafter\def\csname devicon@webstorm-plain\endcsname { \symbol{"E939}} \def\diWebstormPlain {{\DI\csname devicon@webstorm-plain\endcsname}}
 \expandafter\def\csname devicon@tomcat-line-wordmark\endcsname { \symbol{"E92C}} \def\diTomcatLineWordmark {{\DI\csname devicon@tomcat-line-wordmark\endcsname}}
 \expandafter\def\csname devicon@tomcat-line\endcsname { \symbol{"E92D}} \def\diTomcatLine {{\DI\csname devicon@tomcat-line\endcsname}}
-\expandafter\def\csname devicon@vuejs-line-wordmark\endcsname { \symbol{"E92E}} \def\diVuejsLineWordmark {{\DI\csname devicon@vuejs-line-wordmark\endcsname}}
-\expandafter\def\csname devicon@vuejs-line\endcsname { \symbol{"E92F}} \def\diVuejsLine {{\DI\csname devicon@vuejs-line\endcsname}}
-\expandafter\def\csname devicon@vuejs-plain-wordmark\endcsname { \symbol{"E930}} \def\diVuejsPlainWordmark {{\DI\csname devicon@vuejs-plain-wordmark\endcsname}}
-\expandafter\def\csname devicon@vuejs-plain\endcsname { \symbol{"E931}} \def\diVuejsPlain {{\DI\csname devicon@vuejs-plain\endcsname}}
+\expandafter\def\csname devicon@vuejs-line-wordmark\endcsname { \symbol{"E9EF}} \def\diVuejsLineWordmark {{\DI\csname devicon@vuejs-line-wordmark\endcsname}}
+\expandafter\def\csname devicon@vuejs-line\endcsname { \symbol{"E9F0}} \def\diVuejsLine {{\DI\csname devicon@vuejs-line\endcsname}}
+\expandafter\def\csname devicon@vuejs-plain-wordmark\endcsname { \symbol{"E9F1}} \def\diVuejsPlainWordmark {{\DI\csname devicon@vuejs-plain-wordmark\endcsname}}
+\expandafter\def\csname devicon@vuejs-plain\endcsname { \symbol{"E9F2}} \def\diVuejsPlain {{\DI\csname devicon@vuejs-plain\endcsname}}
 \expandafter\def\csname devicon@swift-plain-wordmark\endcsname { \symbol{"E92A}} \def\diSwiftPlainWordmark {{\DI\csname devicon@swift-plain-wordmark\endcsname}}
 \expandafter\def\csname devicon@swift-plain\endcsname { \symbol{"E92B}} \def\diSwiftPlain {{\DI\csname devicon@swift-plain\endcsname}}
 \expandafter\def\csname devicon@webpack-plain-wordmark\endcsname { \symbol{"E928}} \def\diWebpackPlainWordmark {{\DI\csname devicon@webpack-plain-wordmark\endcsname}}
@@ -42,7 +48,7 @@
 \expandafter\def\csname devicon@slack-plain-wordmark\endcsname { \symbol{"E924}} \def\diSlackPlainWordmark {{\DI\csname devicon@slack-plain-wordmark\endcsname}}
 \expandafter\def\csname devicon@slack-plain\endcsname { \symbol{"E925}} \def\diSlackPlain {{\DI\csname devicon@slack-plain\endcsname}}
 \expandafter\def\csname devicon@facebook-plain\endcsname { \symbol{"E91C}} \def\diFacebookPlain {{\DI\csname devicon@facebook-plain\endcsname}}
-\expandafter\def\csname devicon@typescript-plain\endcsname { \symbol{"E920}} \def\diTypescriptPlain {{\DI\csname devicon@typescript-plain\endcsname}}
+\expandafter\def\csname devicon@typescript-plain\endcsname { \symbol{"E9FB}} \def\diTypescriptPlain {{\DI\csname devicon@typescript-plain\endcsname}}
 \expandafter\def\csname devicon@babel-plain\endcsname { \symbol{"E921}} \def\diBabelPlain {{\DI\csname devicon@babel-plain\endcsname}}
 \expandafter\def\csname devicon@mocha-plain\endcsname { \symbol{"E919}} \def\diMochaPlain {{\DI\csname devicon@mocha-plain\endcsname}}
 \expandafter\def\csname devicon@jasmine-plain-wordmark\endcsname { \symbol{"E91B}} \def\diJasminePlainWordmark {{\DI\csname devicon@jasmine-plain-wordmark\endcsname}}
@@ -221,5 +227,19 @@
 \expandafter\def\csname devicon@yii-plain-wordmark\endcsname { \symbol{"EC01}} \def\diYiiPlainWordmark {{\DI\csname devicon@yii-plain-wordmark\endcsname}}
 \expandafter\def\csname devicon@yii-plain\endcsname { \symbol{"EC02}} \def\diYiiPlain {{\DI\csname devicon@yii-plain\endcsname}}
 \expandafter\def\csname devicon@zend-plain-wordmark\endcsname { \symbol{"EC03}} \def\diZendPlainWordmark {{\DI\csname devicon@zend-plain-wordmark\endcsname}}
+
+\expandafter\def\csname devicon@rust-plain\endcsname { \symbol{"E959}} \def\diRustPlain {{\DI\csname devicon@rust-plain\endcsname}}
+\expandafter\def\csname devicon@kubernetes-plain-wordmark\endcsname { \symbol{"E983}} \def\diKubernetesPlainWordmark {{\DI\csname devicon@kubernetes-plain-wordmark\endcsname}}
+\expandafter\def\csname devicon@terraform-plain-wordmark\endcsname { \symbol{"EA64}} \def\diTerraformPlainWordmark {{\DI\csname devicon@terraform-plain-wordmark\endcsname}}
+\expandafter\def\csname devicon@amazonwebservices-plain-wordmark\endcsname { \symbol{"E604}} \def\diAmazonwebservicesPlainWordmark {{\DI\csname devicon@amazonwebservices-plain-wordmark\endcsname}}
+\expandafter\def\csname devicon@azure-plain-wordmark\endcsname { \symbol{"E906}} \def\diAzurePlainWordmark {{\DI\csname devicon@azure-plain-wordmark\endcsname}}
+\expandafter\def\csname devicon@googlecloud-plain-wordmark\endcsname { \symbol{"E985}} \def\diGooglecloudPlainWordmark {{\DI\csname devicon@googlecloud-plain-wordmark\endcsname}}
+\expandafter\def\csname devicon@vscode-plain-wordmark\endcsname { \symbol{"E9D9}} \def\diVscodePlainWordmark {{\DI\csname devicon@vscode-plain-wordmark\endcsname}}
+\expandafter\def\csname devicon@jira-plain-wordmark\endcsname { \symbol{"EA62}} \def\diJiraPlainWordmark {{\DI\csname devicon@jira-plain-wordmark\endcsname}}
+\expandafter\def\csname devicon@numpy-original-wordmark\endcsname { \symbol{"E93B}} \def\diNumpyOriginalWordmark {{\DI\csname devicon@numpy-original-wordmark\endcsname}}
+\expandafter\def\csname devicon@anaconda-original-wordmark\endcsname { \symbol{"EA1E}} \def\diAnacondaOriginalWordmark {{\DI\csname devicon@anaconda-original-wordmark\endcsname}}
+\expandafter\def\csname devicon@tensorflow-line-wordmark\endcsname { \symbol{"E9B4}} \def\diTensorflowLineWordmark {{\DI\csname devicon@tensorflow-line-wordmark\endcsname}}
+\expandafter\def\csname devicon@graphql-plain-wordmark\endcsname { \symbol{"E9A8}} \def\diGraphqlPlainWordmark {{\DI\csname devicon@graphql-plain-wordmark\endcsname}}
+\expandafter\def\csname devicon@groovy-plain\endcsname { \symbol{"E958}} \def\diGroovyPlain {{\DI\csname devicon@groovy-plain\endcsname}}
 
 \endinput
